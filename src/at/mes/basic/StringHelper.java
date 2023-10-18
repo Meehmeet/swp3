@@ -11,6 +11,8 @@ public class StringHelper {
         System.out.println("Gebe dein Wort, bei dem du wissen willst ob es Palindrome ist");
         Palindrome = scanner.nextLine();
 
+        boolean result1 = isPalindrome(Palindrome);
+        System.out.println("Palindrome: " + result1);
 
 
 
@@ -23,8 +25,8 @@ public class StringHelper {
         System.out.println("Gebe den Buchstaben ein den du zählen willst");
         search = scanner.next().charAt(0);
 
-        int result = countLetters(text,search);
-        System.out.println("Anzahl des Buchstaben: " + result);
+        int result2 = countLetters(text,search);
+        System.out.println("Anzahl des Buchstaben: " + result2);
 
 
 
@@ -32,8 +34,27 @@ public class StringHelper {
     }
     public static boolean isPalindrome(String Palindrome) {
         boolean Ausgabe = true;
-        char[] Palindrome
+        int iHilfe = 0;
+        char[] PalindromArray = Palindrome.toCharArray();
 
+        for(int i = PalindromArray.length; i > 0; i--)
+        {
+            int i2 = 0;
+            i2++;
+            if(PalindromArray[i] == PalindromArray[i2])
+            {
+                System.out.println(PalindromArray[i]);
+            }
+
+            else{
+                iHilfe = 1;
+            }
+
+            if(iHilfe == 1)
+            {
+                Ausgabe = false;
+            }
+        }
         return Ausgabe;
     }
 

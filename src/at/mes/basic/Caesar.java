@@ -27,6 +27,7 @@ public class Caesar {
         for(int i = 0; i < inputData.length; i++) {
             int letter = inputData[i] + shift;
             encryptedString += Character.toString(letter);
+
         }
 
         return encryptedString;
