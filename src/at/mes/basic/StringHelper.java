@@ -42,7 +42,6 @@ public class StringHelper {
         {
             if(PalindromArray[i] == PalindromArray[i2])
             {
-                System.out.println(PalindromArray[i]);
                 i2++;
             }
 
