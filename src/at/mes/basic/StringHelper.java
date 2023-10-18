@@ -19,7 +19,7 @@ public class StringHelper {
         String text = "";
         char search = 'a';
 
-        System.out.println("Gebe deinen Text ein bei dem du die Buchstaben zählen willst");
+        System.out.println("\nGebe deinen Text ein bei dem du die Buchstaben zählen willst");
         text = scanner.nextLine();
 
         System.out.println("Gebe den Buchstaben ein den du zählen willst");
@@ -35,15 +35,15 @@ public class StringHelper {
     public static boolean isPalindrome(String Palindrome) {
         boolean Ausgabe = true;
         int iHilfe = 0;
+        int i2 = 0;
         char[] PalindromArray = Palindrome.toCharArray();
 
-        for(int i = PalindromArray.length; i > 0; i--)
+        for(int i = PalindromArray.length - 1; i >= 0; i--)
         {
-            int i2 = 0;
-            i2++;
             if(PalindromArray[i] == PalindromArray[i2])
             {
                 System.out.println(PalindromArray[i]);
+                i2++;
             }
 
             else{
