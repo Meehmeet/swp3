@@ -9,15 +9,27 @@ public class TicTacToe {
         System.out.println("-----------------");
 
         boolean gewonnen = false;
+        char[][] spielfeld = new char[3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                spielfeld[i][j] = ' ';
+            }
+        }
+
+
         int[] ZahlArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] moveArray = {0,0,0,0,0,0,0,0,0};
+        int iZahl = -1;
 
         do {
+            iZahl = iZahl + 1;
+            moveArray[iZahl] = Auswahl();
+            gewonnen = Feld(ZahlArray, moveArray, spielfeld);
 
-            int xWert = Auswahl();
-            gewonnen = Feld(ZahlArray, xWert);
-
-            int oWert = Auswahl2();
-            gewonnen = Feld(ZahlArray, oWert);
+            iZahl = iZahl + 1;
+            moveArray[iZahl] = Auswahl2();
+            gewonnen = Feld(ZahlArray, moveArray, spielfeld);
 
         } while (gewonnen = false);
     }
@@ -40,14 +52,18 @@ public class TicTacToe {
         return move2;
     }
 
-    public static boolean Feld(int[] Array, int move) {
-     boolean ausgabe = false;
+    public static boolean Feld(int[] Array, int[] moveArray, char[][] spielfeld) {
+        boolean ausgabe = false;
 
-        for(int i = 1; i < Array.length; i++)
-        {
-
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(spielfeld[i][j]);
+                if (j < 2) {
+                    System.out.print(" | ");
+                }
+            }
         }
-     return ausgabe;
+        return ausgabe;
     }
 
 }
