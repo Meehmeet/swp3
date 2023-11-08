@@ -1,4 +1,4 @@
-package at.mes.basic;
+package at.mes.basic.struct;
 
 import java.util.Scanner;
 public class CashMachine {

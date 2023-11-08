@@ -1,4 +1,4 @@
-package at.mes.basic;
+package at.mes.basic.struct;
 import java.awt.im.spi.InputMethodDescriptor;
 import java.io.CharConversionException;
 import java.util.Scanner;
