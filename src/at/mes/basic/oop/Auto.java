@@ -7,13 +7,14 @@ public class Auto {
     private String sFarbe = "Keine Farbe";
     private Fahrrad kofferraum;
 
-    private ArrayList<Getraenkekiste> kofferraumGetraenkekiste = new ArrayList<Getraenkekiste>();
+    private ArrayList<Getraenkekiste>kofferraumGetraenkekiste = new ArrayList<Getraenkekiste>();
     public Auto() {
     }
 
     public Auto(int iLeistung, String sFarbe) {
         this.iLeistung = iLeistung;
         this.sFarbe = sFarbe;
+        this.kofferraumGetraenkekiste = new ArrayList<>();
     }
 
     public Fahrrad getKofferraum() {
@@ -23,6 +24,12 @@ public class Auto {
     public void setKofferraum(Fahrrad kofferraum) {
         this.kofferraum = kofferraum;
     }
+
+
+    public void addGetraenke(Getraenkekiste Getraenke){
+        this.kofferraumGetraenkekiste.add(Getraenke);
+    }
+
 
     public ArrayList<Getraenkekiste> getKofferraumGetraenkekiste() {
         return kofferraumGetraenkekiste;
