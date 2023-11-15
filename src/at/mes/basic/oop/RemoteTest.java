@@ -11,6 +11,10 @@ public class RemoteTest {
         batteryArrayList.add(batterie1);
         batteryArrayList.add(batterie2);
         Remote fernbedienung = new Remote(true,true,batteryArrayList);
+        fernbedienung.turnOff();
+        fernbedienung.Power(batterie1, batterie2);
+        fernbedienung.turnOn(batterie1, batterie2);
 
+        fernbedienung.getStatus(batterie1, batterie2);
     }
 }
