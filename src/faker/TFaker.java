@@ -26,6 +26,7 @@ public class TFaker {
                 int number2 = faker.number().numberBetween(1,12);
                 int number3 = faker.number().numberBetween(1,29);
                 int number4 = faker.number().numberBetween(1,100);
+                int number5 = faker.number().numberBetween(1,100);
                 String genre = faker.music().genre();
                 String email = faker.name().firstName() + "." + faker.name().lastName() + "@faker.at";
                 String number = faker.phoneNumber().phoneNumber();
@@ -45,25 +46,25 @@ public class TFaker {
                 }*/
 
                 /*if(i == 100) {
-                    myWriter.write("(" + i + ", '" + firstName + " " + lastName + "', '" + email + "', '" + number + "');");
+                    myWriter.write("(" + i + ", '" + firstName + "', '" + lastName + "', '" + email + "', '" + number + "');");
                 }
                 else{
-                    myWriter.write("(" + i + ", '" + firstName + " " + lastName + "', '" + email + "', '" + number + "'), \n");
+                    myWriter.write("(" + i + ", '" + firstName + "', '" + lastName + "', '" + email + "', '" + number + "'), \n");
                 }*/
 
-                if(i == 100){
+                /*if(i == 100){
                     myWriter.write("(" + i + ", " + i + ", " + gprice + ");");
                 }
                 else{
                     myWriter.write("(" + i + ", " + i + ", " + gprice + "), \n");
-                }
+                }*/
 
-                /*if(i == 100){
-                    myWriter.write("(" + i + ", " + i + ", " + number4 + ", " + price + ");");
+                if(i == 100){
+                    myWriter.write("(" + i + ", " + i + ", " + number4 + ", " + number5 + ", " + price + ");");
                 }
                 else {
-                    myWriter.write("(" + i + ", " + i + ", " + number4 + ", " + price + "), \n");
-                }*/
+                    myWriter.write("(" + i + ", " + i + ", " + number4 + ", " + number5 + ", " + price + "), \n");
+                }
             }
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
