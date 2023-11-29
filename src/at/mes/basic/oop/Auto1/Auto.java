@@ -1,4 +1,4 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Auto1;
 
 import java.util.ArrayList;
 

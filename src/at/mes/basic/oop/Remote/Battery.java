@@ -1,4 +1,4 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Remote;
 
 public class Battery {
     private double charging_status;

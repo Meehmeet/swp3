@@ -1,4 +1,4 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Remote;
 
 import java.util.ArrayList;
 
@@ -14,21 +14,23 @@ public class Remote {
     }
 
     public void turnOn(Battery batterie, Battery batterie2){
+        if(!isOn) {
+            if (batterie.getCharging_status() >= 5.0) {
+                System.out.println("Verbraucher angeschlossen");
+                batterie.chargingverbrauch();
+            } else {
+                System.out.println("Die Fernbedienung hat keinen Akku mehr.");
+            }
 
-        if (!isOn && hasPower && batterie.getCharging_status() >= 5.0) {
+            if (batterie2.getCharging_status() >= 5.0) {
+                System.out.println("Verbraucher angeschlossen");
+                batterie2.chargingverbrauch();
+            } else {
+                System.out.println("Die Fernbedienung hat keinen Akku mehr.");
+            }
             isOn = true;
-            System.out.println("Verbraucher angeschlossen");
-            batterie.chargingverbrauch();
-        } else {
-            System.out.println("Die Fernbedienung ist bereits an, oder hat keinen Akku mehr.");
-        }
-
-        if (!isOn && hasPower && batterie2.getCharging_status() >= 5.0) {
-            isOn = true;
-            System.out.println("Verbraucher angeschlossen");
-            batterie2.chargingverbrauch();
-        } else {
-            System.out.println("Die Fernbedienung ist bereits an, oder hat keinen Akku mehr.");
+        }else{
+            System.out.println("Die Fernbedienung ist schon an.");
         }
     }
 
@@ -59,8 +61,13 @@ public class Remote {
     }
 
     public void getStatus(Battery batterie1, Battery batterie2){
-        System.out.println("Der Akku der Batterie beträgt: " + batterie1.getCharging_status());
-        System.out.println("Der Akku der Batterie beträgt: " + batterie2.getCharging_status());
+        System.out.println("Der Akku der Batterie 1 beträgt: " + batterie1.getCharging_status());
+        System.out.println("Der Akku der Batterie 2 beträgt: " + batterie2.getCharging_status());
+
+        double Mittelwert = (batterie1.getCharging_status() + batterie2.getCharging_status()) / 2;
+        System.out.println("Mittelwert der Batterien: " + Mittelwert);
+
+        System.out.println("Sind die Batterien an: " + isOn);
     }
 
     public ArrayList<Battery> getBatterien() {

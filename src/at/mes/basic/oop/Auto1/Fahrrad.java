@@ -1,4 +1,4 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Auto1;
 
 public class Fahrrad {
     private int rahmengrosse = 0;

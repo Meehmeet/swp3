@@ -1,4 +1,9 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Auto1;
+
+import at.mes.basic.oop.Auto1.Auto;
+import at.mes.basic.oop.Auto1.Fahrrad;
+import at.mes.basic.oop.Auto1.Flasche;
+import at.mes.basic.oop.Auto1.Getraenkekiste;
 
 public class testit {
     public static void main(String[] args) {

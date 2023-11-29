@@ -1,4 +1,4 @@
-package at.mes.basic.oop;
+package at.mes.basic.oop.Auto1;
 
 public class Getraenkekiste {
     private int anzahl;
