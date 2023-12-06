@@ -18,5 +18,15 @@ public class CarTest {
         Producer producer = new Producer("Beer", "Austria", 10, carsArrayList);
 
         car.rPrice(producer);
+
+        car.information(producer);
+
+        System.out.println("Car 1: ");
+        System.out.println("Basispreis: " + car.getBasisprice());
+        System.out.println("Basisverbrauch: " + car.getBasisverbrauch());
+        System.out.println("Farbe: " + car.getColor());
+        System.out.println("Distanz: " + car.getDistance());
+        System.out.println("Max speed: " + car.getMaxspeed());
+        System.out.println("Horsepower: " + car.getEngine().getHorsepower());
     }
 }

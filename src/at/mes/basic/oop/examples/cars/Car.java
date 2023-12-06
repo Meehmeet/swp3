@@ -21,7 +21,6 @@ public class Car {
     }
 
     public void information(Producer producer){
-        producer.getCars().get(0).basisprice;
 
     }
 
