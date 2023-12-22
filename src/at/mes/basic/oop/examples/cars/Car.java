@@ -1,6 +1,6 @@
 package at.mes.basic.oop.examples.cars;
 
-import at.mes.basic.oop.Remote.Battery;
+import at.mes.basic.oop.examples.cars.Producer;
 
 import java.util.ArrayList;
 
