@@ -11,11 +11,6 @@ public class Lamp {
         this.element = element;
     }
 
-
-    public void addGluehelement(Gluehelemente gluehelement){
-
-    }
-
     public void turnAllOn(){
         for (Gluehelemente gluehelement : element){
             gluehelement.turnOn();
