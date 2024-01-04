@@ -26,7 +26,9 @@ public class Lamp {
         double verbrauch = 0;
         for (Gluehelemente gluehelement : element){
             verbrauch = gluehelement.getPower() + verbrauch;
+            System.out.println("Verbrauch von Glühelement" + gluehelement.getName() + ": " + verbrauch);
         }
+
         return verbrauch;
     }
 
