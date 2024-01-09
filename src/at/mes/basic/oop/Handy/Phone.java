@@ -30,8 +30,8 @@ public class Phone {
     public void printAllFiles(){
         sdcard.getAllFiles();
     }
-    public void takePicture(){
-        Phonefile file = camera.makePicture();
+    public void takePicture(String name, String extension){
+        Phonefile file = camera.makePicture(extension, name);
         sdcard.saveFile(file);
     }
 

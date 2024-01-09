@@ -31,10 +31,15 @@ public class SDCard {
     public void getAllFiles(){
         for (Phonefile file: files) {
             int i = 0;
-            i++;
+            i += 1;
             System.out.println(i + ". Bild: " + file.getName() + "." + file.getExtension());
         }
     }
+
+    public void addFile(Phonefile file){
+        this.files.add(file);
+    }
+
     public double getCapacity() {
         return capacity;
     }
