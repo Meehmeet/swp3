@@ -10,8 +10,17 @@ public class Handytest {
 
         SDCard sd1 = new SDCard(100000);
 
+        ArrayList<Phonefile> phonefileArrayList = new ArrayList<>();
+
+        phonefileArrayList.add(pf1);
+        phonefileArrayList.add(pf2);
+
         sd1.addFile(pf1);
         sd1.addFile(pf2);
+
+        for (Phonefile file: phonefileArrayList) {
+            System.out.println(file.getSize());
+        }
 
         SIM s1 = new SIM(1,"123456789");
         Camera c1 = new Camera(1000);
